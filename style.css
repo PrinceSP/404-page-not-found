@@ -1,0 +1,145 @@
+:root{
+  --primary: #bfedf6;
+  --secondary: #ff346a;
+  --text-color: #ff0000;
+  --font1:'Chivo', sans-serif;
+  --font2:'Poppins', sans-serif;
+  --font3:'B612', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+}
+
+.main,#particles-js{
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+}
+
+#particles-js{
+  z-index: 1;
+  background: none;
+}
+
+h1,h3{
+  z-index: 2;
+}
+
+h1{
+  font-size: 150px;
+  font-family: var(--font2);
+  color: var(--secondary);
+  font-weight: 900;
+}
+
+h3{
+  font-size: 50px;
+  font-family: var(--font3);
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+  color: var(--text-color);
+}
+
+.main > svg{
+  position: absolute;
+  left:7em;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.main > svg:nth-of-type(1){
+  top: 20px;
+}
+
+.main > svg:nth-of-type(2){
+  bottom: -125px;
+  transform: translateX(250%);
+  width: 200px;
+  height: 200px;
+}
+
+.main > svg:nth-of-type(3){
+  width: 100px;
+  height: 100px;
+  transform: translate(1000px,-10px);
+}
+
+@keyframes rotate1 {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(-360deg);
+  }
+}
+
+.main svg > path:nth-of-type(1){
+  border-radius: 50%;
+  transform-origin: center;
+  animation: rotate1 4s linear infinite ;
+}
+.main svg > path:nth-of-type(2){
+  border-radius: 50%;
+  transform-origin: center;
+  animation: rotate2 4s linear infinite ;
+}
+.main svg > path:nth-of-type(3){
+  border-radius: 50%;
+  transform-origin: center;
+  animation: rotate1 4s linear infinite ;
+}
+
+.main > .link {
+  margin-top: 150px;
+  height: 30px;
+  width: 400px;
+  display: inline-flex;
+  justify-content: space-around;
+  font-size: 23px;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 2;
+}
+
+.main > .link div{
+  cursor: pointer;
+  position: relative;
+}
+
+.main > .link > div img{
+  position: absolute;
+  left:-50px;
+  bottom: 50%;
+}
+
+.main > .link p{
+  cursor: pointer;
+}
+
+.main > .link a{
+  color: #000;
+  text-decoration: none;
+  text-transform: capitalize;
+  z-index: 2;
+}
